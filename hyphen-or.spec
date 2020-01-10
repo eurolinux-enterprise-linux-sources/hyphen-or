@@ -1,8 +1,8 @@
 Name: hyphen-or
-Summary: Oriya hyphenation rules
+Summary: Odia hyphenation rules
 Epoch: 1
 Version: 0.7.0
-Release: 3%{?dist}
+Release: 5%{?dist}
 Source: http://download.savannah.gnu.org/releases/smc/hyphenation/patterns/%{name}-%{version}.tar.bz2
 Group: Applications/Text
 URL: http://wiki.smc.org.in
@@ -11,7 +11,7 @@ BuildArch: noarch
 Requires: hyphen
 
 %description
-Oriya hyphenation rules.
+Odia hyphenation rules.
 
 %prep
 %setup -q
@@ -27,6 +27,12 @@ install -m644 -p *.dic %{buildroot}/%{_datadir}/hyphen
 %{_datadir}/hyphen/*
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1:0.7.0-5
+- Mass rebuild 2013-12-27
+
+* Wed Dec 18 2013 Parag <pnemade AT redhat DOT com> - 1:0.7.0-4
+- Resolves:rh#1040776: Change language name "Oriya" to "Odia"
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1:0.7.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
